@@ -10,7 +10,42 @@
   </head>
   <body>
     <div class="container-fluid">
-
+      <div class="jumbotron">
+        <h2>Eatza Pizza!</h2>
+      </div>
+      <div> <!-- Contains input values for pizza order-->
+        <form class="" action="index.html" method="post">
+          <h3>Select your size:</h3>
+          <div class="sizes">
+            <label>
+              <input id="small" type="radio" name="size" value="6">
+              Small
+            </label>
+          </div>
+          <div class="sizes">
+            <label>
+              <input id="medium" type="radio" name="size" value="8">
+              Medium
+            </label>
+          </div>
+          <div class="sizes">
+            <label>
+              <input id="large" type="radio" name="size" value="10">
+              Large
+            </label>
+          </div>
+          <h3>Select your toppings:</h3>
+          <div class="toppings">
+            <input type="checkbox" name="topping" value="1"> Cheese <br>
+            <input type="checkbox" name="topping" value="1"> Cheese <br>
+            <input type="checkbox" name="topping" value="1"> Cheese <br>
+          </div>
+          <button id="enter" type="submit">Place my Order!</button>
+        </form>
+        <span id="output">
+          <p><b>Your order has been placed!</b></p>
+        </span>
+      </div>
     </div>
   </body>
 </html>
