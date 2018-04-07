@@ -1,24 +1,31 @@
-function Pizza(name, toppings, size) {
-  this.name = name;
-  this.toppings = toppings;
+function Pizza(topping, size) {
+  this.topping = topping;
   this.size = size;
-};
+}
 
 Pizza.prototype.pizzaOrder = function() {
-  return this.toppings + this.size;
+  var price = "";
+
+  this.topping + this.size;
+
+  return price;
 };
 
 $(function() {
-  $("#order").submit(function(event) {
+  $("#orderForm").submit(function(event) {
     event.preventDefault();
-    pizza1 = new Pizza($("input#pizza1").val());
-    // pizza2 = new Pizza($("input#pizza1").val());
+    $("input:checkbox[name=topping]:checked").each(function(){
+      var userToppings = $(this).val();
+    });
+    var userSizes = $("input:radio[name=size]:checked").val();
 
-    var orderInfo = pizza1.name + ", your order of one" + pizza1.size + "pizza with" + pizza1.toppings + "will be: ";
+debugger;
+    pizza1 = new Pizza (userToppings, userSizes);
+
+    var orderInfo = "Your order will be: $";
         orderInfo += pizza1.pizzaOrder();
-    var order = $('#order1');
-    order.text = orderInfo;
-
-
+    var order = $('#orderConfirm');
+    $("#orderConfirm").text = orderInfo;
+    $("#orderConfirm").show();
   });
 });

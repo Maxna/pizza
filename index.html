@@ -14,9 +14,9 @@
         <h2>Eatza Pizza!</h2>
       </div>
       <div> <!-- Contains input values for pizza order-->
-        <form class="" action="index.html" method="post">
+        <form id="orderForm">
           <h3>Select your size:</h3>
-          <div class="sizes">
+          <div class="sizes"><!-- radio buttons for sizes-->
             <label>
               <input id="small" type="radio" name="size" value="6">
               Small
@@ -34,15 +34,15 @@
               Large
             </label>
           </div>
-          <h3>Select your toppings:</h3>
+          <h3>Select your toppings:</h3> <!-- checkboxes for toppings-->
           <div class="toppings">
             <input type="checkbox" name="topping" value="1"> Cheese <br>
-            <input type="checkbox" name="topping" value="1"> Cheese <br>
-            <input type="checkbox" name="topping" value="1"> Cheese <br>
+            <input type="checkbox" name="topping" value="1"> Pepperoni <br>
+            <input type="checkbox" name="topping" value="1"> Olives <br>
           </div>
           <button id="enter" type="submit">Place my Order!</button>
         </form>
-        <span id="output">
+        <span id="orderConfirm"> <!-- outputs order info-->
           <p><b>Your order has been placed!</b></p>
         </span>
       </div>
