@@ -1,3 +1,32 @@
 #orderConfirm {
   display: none;
+  text-align: center;
+  font-style: italic;
+  font-family: serif;
+  color: red;
+  background-color: wheat;
+  border: 2px dashed yellow;
+}
+
+.jumbotron {
+  background-color: wheat;
+  color: red;
+  text-align: center;
+}
+
+h3 {
+  background-color: wheat;
+  color: red;
+}
+
+.toppings {
+  font-family: sans-serif;
+  background-color: gray;
+  color: yellow;
+}
+
+.sizes {
+  font-family: sans-serif;
+  background-color: gray;
+  color: yellow;
 }
