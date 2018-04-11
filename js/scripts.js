@@ -5,11 +5,11 @@ function Pizza(size) {
 }
 
 Pizza.prototype.pizzaOrder = function() {
+  this.cost = 0;
   for (var i = 1; i <= pizza1.topping.length; i++) {
-    this.cost = this.size += this.topping;
+    this.cost = (this.size += 1);
   }
   return this.cost;
-  console.log(this.cost);
 };
 
 $(function() {
@@ -21,8 +21,7 @@ $(function() {
     $("input:checkbox[name=topping]:checked").each(function(){
       pizza1.topping.push($(this).val());
     });
-    debugger;
-    console.log(pizza1);
+
     var orderInfo = "Your order will be: $";
         orderInfo += pizza1.pizzaOrder();
     var order = $('#orderConfirm');
