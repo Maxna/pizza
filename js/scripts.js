@@ -6,11 +6,12 @@ function Pizza(size) { //Pizza constructor
 }
 //add toppings to pizza value
 Pizza.prototype.pizzaOrder = function() {
-  this.cost = 0;
+  // this.cost = 0;
   for (var i = 1; i <= pizza1.topping.length; i++) {
-    this.cost = (this.size += 1);
+    this.cost = (this.cost += 1);
   }
-  return this.cost;
+  return this.cost + this.size;
+  console.log(this.cost);
 };
 //front end logic
 $(function() {
