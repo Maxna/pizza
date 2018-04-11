@@ -5,22 +5,23 @@ function Pizza(size) {
 }
 
 Pizza.prototype.pizzaOrder = function() {
-  for (var i = 0; i < pizza1.topping.length; i++) {
+  for (var i = 1; i <= pizza1.topping.length; i++) {
     this.cost = this.size += this.topping;
   }
   return this.cost;
+  console.log(this.cost);
 };
 
 $(function() {
   $("#orderForm").submit(function(event) {
     event.preventDefault();
     pizza1 = new Pizza();
+    pizza1.size = parseInt($("input:radio[name=size]:checked").val());
     // var userToppings = parseInt($("input:checkbox[name=topping]:checked").val());
     $("input:checkbox[name=topping]:checked").each(function(){
       pizza1.topping.push($(this).val());
     });
-    var userSizes = parseInt($("input:radio[name=size]:checked").val());
-debugger;
+    debugger;
     console.log(pizza1);
     var orderInfo = "Your order will be: $";
         orderInfo += pizza1.pizzaOrder();
